@@ -4,11 +4,6 @@ import numpy as np
 # init part
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
-#detector_params = cv2.SimpleBlobDetector_Params()
-#detector_params.filterByArea = True
-#detector_params.maxArea = 1500
-#detector = cv2.SimpleBlobDetector_create(detector_params)
-
 
 def detect_faces(img, cascade):
     gray_frame = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -94,12 +89,7 @@ def vecter(vec_list):
         print("R:y",vec_list[1][1])
         cv2.arrowedLine(image, (250, 250), (g*vec_list[1][0]+250, g*vec_list[1][1]+250),(0, 0, 255), 2)
 
-
-    
-
     cv2.imshow('vecter', image)
-    #return c_recx,c_recy,c_eyex,c_eyey
-    
 
 def nothing(x):
     pass
